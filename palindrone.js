@@ -7,22 +7,19 @@
 *	3) Ignores spaces and capitalization of the words
 ************************************************************************/
 
-
-function stringReverse (string) {
+function palindromeChecker (string) {
 
 	string = string.toUpperCase();
 	var newString = "";
 	for (var i = string.length - 1; i >= 0; i--) {
-		newString += string[i]; 
+		newString += string[i];  
 	}
-	newString = newString.replace(/\s+/g, '');
-	string = string.replace(/\s+/g, '');
+	newString = newString.replace(/\s+/g, '');//Removes whitespace
+	string = string.replace(/\s+/g, '');//Removes whitespace
 
-	if (newString === string)
-		return true;
-	else
-		return false;
+	return newString === string;//Returns true if palindrome
+
 }
 
-console.log(stringReverse("A nut for a jar of tuna"));
-console.log(stringReverse("not a palindrone"));
+console.log(palindromeChecker("A nut for a jar of tuna"));//Returns true
+console.log(palindromeChecker("not a palindrone"));//Returns false
