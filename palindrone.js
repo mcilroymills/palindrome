@@ -1,3 +1,13 @@
+/***********************************************************************
+* Author: Mills McIlroy
+* Date: January 13, 2016
+* Description: This function performs according to these requirements:
+*	1) Takes a single argument, a string
+*	2) Returns true or false if the word is a palindrome
+*	3) Ignores spaces and capitalization of the words
+************************************************************************/
+
+
 function stringReverse (string) {
 
 	string = string.toUpperCase();
